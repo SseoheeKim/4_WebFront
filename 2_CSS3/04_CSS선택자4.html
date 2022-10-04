@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>04_CSS선택자4</title>
 
-    <link rel="stylesheet" href="css/01_selector4.css">
+    <link rel="stylesheet" href="css/04_selector4.css">
 </head>
 <body>
     <h5>일반구조/형태구조 둘다 형제관계일 때 사용가능</h5>
@@ -15,6 +15,16 @@
     특정 요소의 자식 요소를 선택하는 선택자
     -형제 관계에 있는 요소 중 특정 요소만을 선택
     -(중요) 위치를 기준으로 구분
+
+    :first-child  -> 형제 관계의 요소 중 첫 번째 요소
+
+    :last-child   -> 형제 관계의 요소 중 마지막 요소
+
+    :nth-child(숫자 또는 수열) -> 형제 관계의 요소 중 숫자번째 요소
+                                  또는 모든 수열번째 요소를 선택
+    
+    :nth-last-child(숫자 또는 수열) -> 형제 관계의 요소 중 뒤에서부터 지정된 숫자번째 요소
+                                       또는 뒤에서부터 모든 수열번째 요소를 선택
     </pre>
 
     <div id="test1">
@@ -33,6 +43,16 @@
     특정 요소의 자식 요소를 선택하는 선택자
     -형제 관계에 있는 요소 중 특정 요소만을 선택
     -(중요) 선택된 요소를 기준으로 구분
+
+    :first-of-type      -> 같이 선택된 형제 요소 중 첫 번째 요소
+
+    :last-of-type      -> 같이 선택된 형제 요소 중 마지막 요소
+
+    :nth-of-type(숫자 또는 수열)       -> 같이 선택된 형제 요소 중 숫자번째 요소
+                                        또는 수열번째 요소 모두 선택
+
+    :nth-last-of-type(숫자 또는 수열)   -> 같이 선택된 형제 요소 중 뒤에서부터 숫자번째 요소
+                                        또는 수열번째 요소 모두 선택
     </pre>
 
     <div id="test2">

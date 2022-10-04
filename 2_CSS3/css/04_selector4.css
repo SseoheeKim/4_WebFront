@@ -1,8 +1,8 @@
 /* 일반 구조 선택자 */
 /* 
-    :first-child  -> 형제 관게의 요소 중 첫 번째 요소
+    :first-child  -> 형제 관계의 요소 중 첫 번째 요소
 
-    :last-child   -> 형제 관게의 요소 중 마지막 요소
+    :last-child   -> 형제 관계의 요소 중 마지막 요소
 
     :nth-child(숫자 또는 수열) -> 형제 관계의 요소 중 숫자번째 요소
                                 또는 모든 수열번째 요소를 선택
@@ -12,21 +12,26 @@
 */
 
 
- /* first-child: 형제 관계의 요소 중 첫번째 주소*/
- #test1>p:first-child{
+ /* :first-child: 형제 관계의 요소 중 첫번째 주소*/
+ #test1 > p:first-child{
     background-color: red;
     color:white;
  }
 
+
+
+
+ /* :last-child   -> 형제 관계의 요소 중 마지막 요소 */
  #test1 > p:last-child{
-     /* test1의 자식요소 중 마지막 자식이 p태그가 맞을 경우 선택 */
+     /* test1의 자식 요소 중 마지막 자식이 p태그가 맞을 경우 선택 */
     background-color: yellow;
  }
 
 
- /* :nth-child(숫자 또는 수열) -> 형제 관계의 요소 중 숫자번째 요소
-                                또는 모든 수열번째 요소를 선택 */
 
+
+ /* :nth-child(숫자 또는 수열) -> 형제 관계의 요소 중 숫자번째 요소
+                                 또는 모든 수열번째 요소를 선택 */
 #test1 > p:nth-child(2) { /* 첫번째요소 == 1번 */
     /* test1의 자식요소 중 2번째 자식이 p태그가 맞을 경우 선택 */
     background-color: yellow;
@@ -52,6 +57,11 @@
     font-size : 50px;
 }
 
+
+
+
+/* :nth-last-child(숫자 또는 수열) -> 형제 관계의 요소 중 뒤에서부터 지정된 숫자번째 요소
+                                     또는 뒤에서부터 모든 수열번째 요소를 선택 */
 #test1 > p:nth-last-child(2){
     /* #test1의 자식 요소 중 뒤에서 두번째 자식이 p태그가 맞을 경우 선택 */
     color : silver;
@@ -78,25 +88,25 @@
     background-color: orange;
 }
 
+
 /* :last-of-type      -> 같이 선택된 형제 요소 중 마지막 요소 */
 #test2 > p:last-of-type {
     background-color: skyblue;
 }
 
 /* :nth-of-type(숫자 또는 수열)       -> 같이 선택된 형제 요소 중 숫자번째 요소
-                                        또는 수열번째 요소 모두 선택
- */
-#test2 > p>:nth-of-type(2n){
-    border : 1px solid red;
+                                        또는 수열번째 요소 모두 선택 */
+#test2 > p:nth-of-type(2n){
+    border : 2px solid red;
 }
 
 /*  :nth-last-of-type(숫자 또는 수열)   -> 같이 선택된 형제 요소 중 뒤에서부터 숫자번째 요소
-                                        또는 수열번째 요소 모두 선택
-*/
+                                        또는 수열번째 요소 모두 선택 */
 #test2 > *:nth-last-of-type(2n+1){
+    /* :nth-of-type() 앞에 *을 작성하는 경우 각각의 요소 종류별로 수열이 적용 */
     border : 3px solid blue
 }
-/* :nth-of-type() 앞에 *을 작성하는 경우 각각의 요소 종류별로 수열이 적용 */
+
 
 #test2 > *:nth-child(3n+1) {
     background-color: pink;
