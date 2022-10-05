@@ -1,0 +1,80 @@
+div{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.test{
+    width: 300px;
+    height: 200px;
+    background-color: #ddd;
+}
+
+
+/* float:left */
+.left{
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+
+    float:left;
+}
+
+
+
+.clear{
+    float:both;
+
+    /* float:clear;
+    float:left; */
+}
+
+
+.right{
+    width: 50px;
+    height: 50px;
+    background-color: "yellow";
+
+    float : right; /*  요소를 띄워 오른쪽 정렬 */
+}
+
+
+/* ------------------------------------------------------------------------- */
+.bg-1{ background-color: #F675A8;}
+.bg-2{ background-color: #FFB3B3;}
+.bg-3{ background-color: #FFDBA4;}
+.bg-4{ background-color: #C1EFFF;}
+.bg-5{ background-color: #B1B2FF;}
+.bg-6{ background-color: #ECC5FB;}
+.bg-7{ background-color: #576F72;}
+/* ------------------------------------------------------------------------- */
+
+/* float를 이용한 좌우 2분할 */
+.container-1{
+    width: 400px;
+    height: 200px;
+}
+
+.div-1{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+
+/* 4분할하기 */
+.row-1{ /* 행 분할 */
+    /* width: 100%;  -> block형식 요소는 width가 기본100%이므로 생략 가능*/ 
+    height: 50%;
+}
+
+
+.col-1{ /* 열 분할*/
+    width: 50%;
+    height: 100%;
+    float: left;
+} 
+
+.col-1 > img{
+    width: 100%;
+    height: 100%;
+}
