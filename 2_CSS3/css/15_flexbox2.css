@@ -1,0 +1,34 @@
+.flex-container{
+    height: 75vh; /* 화면의 75%만큼의 높이 */
+    /* vh(viewport height) -> 화면의 높이
+        viewport -> 브라우저나 이용기기의 화면 */
+
+    display: flex;
+
+    /********************************************************************************/
+    /********* flex-wrap ***********/
+    flex-wrap: wrap;
+    /* item의 크기가 변하지 않고 
+    mian-axis방향으로 item이 초과하게 되면 다음줄로 이동 */
+    
+
+
+    /********************************************************************************/
+    /********* align-content ***********/
+    /* 
+        item이 포장된 한 줄을 단위로 하여 
+        cross-axis방향으로 정렬(배치)하는 방법 
+    
+        * 속성 값은 justify-content 값 모두 사용 가능
+        - flex-start    : cross-axis 시작점 기준
+        - flex-end      : cross-axis 끝점 기준
+        - center        : cross-axis 가운데
+        - space-around  : item이 포장된 한 줄에 cross-axis방향으로 일정한 크기의 공간을 나누어 배치
+        - space-evenly  : item이 포장된 한 줄에 cross-axis방향으로 동일한 크기의 공간을 나누어 배치
+        - space-between : item이 포장된 한 줄에 cross-axis 시작/끝지점에 붙어있게 하고
+                          나머지에 동일한 크기의 공간을 나누어 배치
+
+    */
+    align-content: space-between;
+
+}

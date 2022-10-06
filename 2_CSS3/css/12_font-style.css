@@ -1,0 +1,97 @@
+/* 웹 폰트 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Nanum+Pen+Script&family=Noto+Serif+KR&display=swap');
+
+
+#size-test{
+    font-size : 40px;
+}
+
+#size-test > li:nth-child(1) {font-size: 10px;}
+#size-test > li:nth-child(2) {font-size: 7pt;}
+#size-test > li:nth-child(3) {font-size: 50%;}
+#size-test > li:nth-child(4) {font-size: 0.5em}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* font-weight */
+#weight-test{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#weight-test > li:first-child{
+    font-weight: lighter; 
+    /* lighter -> 부모(bold)보다 얇게(normal) */
+}
+
+#weight-test > li:nth-child(2){
+    font-weight: bold; 
+}
+
+#weight-test > li:nth-child(3){
+    font-weight: bolder; 
+    /* 부모가 얇은 경우라면 normal로 표시
+    부모가 굵은 경우라면 더 굵게는 X */
+}
+
+#weight-test > li:nth-child(4){
+    font-weight: 500; 
+    /* 
+    100~500 : normal
+    600~900 : bold 
+    */
+}
+
+#weight-test > li:nth-child(5){
+    font-style: italic;
+    /* font-style : 굴꼴의 모양
+        - italic : 폰트에서 제공하는 기울림체
+        - oblique : 강제로 글자를 기울림체로 변경*/
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* font-family */
+#family-test > li:nth-child(1) {font-family: '궁서';}
+#family-test > li:nth-child(2) {font-family: '김서희체', '궁서체';}
+/*  폰트명(궁서) : 글자 크기에 따라 변하는 폭(가변)
+    폰트명+체(궁서체) : 글자 크기와 관계없이 일정한 폭(고정) */
+
+/*  font-family: 폰트명을 여러 개 작성 가능  */
+/*  또한 폰트가 존재하지 않는 경우, 브라우저의 기본 폰트가 적용 */
+#family-test > li:nth-child(3) {font-family: '김서희체';}
+
+
+/* 웹 폰트 사용하기 */
+#family-test2 > li:nth-child(1){
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 20px;
+}
+
+/* @import를 이용한 웹 폰트 적용 */
+#family-test2 > li:nth-child(2){
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 20px;
+}
+
+
+/* @font-face를 이용한 웹 폰트 적용 */
+@font-face {
+    font-family: 'KOTRALEAP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#family-test2 > li:nth-child(3){
+    font-family: 'KOTRALEAP';
+    font-size: 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
