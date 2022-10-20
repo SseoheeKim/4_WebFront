@@ -1,5 +1,5 @@
 .flex-container{
-    height: 500px;
+    height: 100vh;
     background-color: #ddd;
 
     display: flex;
@@ -7,9 +7,9 @@
         -> item에 자동으로 지정된 margin이 모두 사라지고 
         content+ padding +border 영역만큼 크기를 가지게 됨
        
-        item에 W/H가 지정되어 있지 않을 경우
-        item의 높이는 flex-contaitner의 너비/높이와 같아진다.
-        (main-axis(중심축)방향에 따라 다름)
+        item에 width/height가 지정되어 있지 않을 경우
+        item에 높이는 flex-container의 너비/높이 와 같아지게 된다.
+        (main-axis 방향에 따라 다름)
     */
 
 
@@ -35,10 +35,10 @@
     flex-wrap : nowrap; /* 기본값 */
 
     /* item을 여러줄로 배치 */
-    flex-wrap : wrap;
+    /* flex-wrap : wrap; */
 
     /* item을 여러줄로, 뒤에서부터 배치 */
-    flex-wrap : wrap-reverse;
+    /* flex-wrap : wrap-reverse; */
 
 
 
@@ -48,7 +48,7 @@
       -> 왜 사용하는가?
         flex설계 시 가장 기본이 되는 설정이기 때문에 둘을 한 번에 지정하는 속성이 존재 */
 
-    flex-flow: row nowrap;
+    /* flex-flow: row nowrap; */
             /* flex-direction  flex-wrap*/
 
 
