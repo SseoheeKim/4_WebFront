@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,45 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .container {
-            width: 300px;
-            height: 300px;
-            border: 5px solid black;
-            background-color: blue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-        
-        .item {
-            width: 50px;
-            height: 50px;
-        }
-
-        .item1{background-color: red;}
-        .item2{background-color: orangered;}
-        .item3{background-color: orange;}
-        .item4{background-color: yellow;}
-        
-    </style>
 </head>
 <body>
+    
+container 정렬이 필요한 요소를 감싸는 요소
 
-    <div class="container">
-        <p class="item item1">items1</p>
-        <p class="item item2">items2</p>
-        <p class="item item3">items3</p>
-        <p class="item item4">items4</p>
-    </div>
-    
-    <div class="container">
-        <div class="item item1">items1</div>
-        <div class="item item2">items2</div>
-        <div class="item item3">items3</div>
-        <div class="item item4">items4</div>
-    </div>
-    
+display: flex;
+/* flex-direction 
+        - 중심축 main-axis의 방향과 시작 위치를 지정하는 속성
+        flex-direction: row;             가로 방향(행) == 기본값
+        flex-direction: row-reverse;     가로 역방향
+        flex-direction: column;          세로 방향(열)
+        flex-direction: column-reverse;  세로 역방향 
+
+/* flex-wrap 
+        - 내부 item들을 포장하여 item들을 
+	강제로 한 줄에 배치되게 할 것인지 여러 줄로 배치되게 할 것인지 지정하는 속성
+	flex-wrap : nowrap;		item들을 강제로 한줄에 배치(item크기가 변함)
+	flex-wrap : wrap;		여러 줄로 배치
+	flex-wrap : wrap-reverse;	여러줄로 뒤에서부터 배치
+
+/* flex-flow
+      - flex-direction  & flex-wrap을 한번에 지정하는 속성
+      - flex설계 시 가장 기본이 되는 설정
+
+
+/* justify-content
+      - main-axis 방향으로 내용(item)을 정렬하는 방법을 조정하는 속성
+	: space-around; main axis 방향으로 item주위에 일정한 크기의 공간을 추가해서 간격을 두고 배치
+	: space-evenly;  main-axis 방향으로 item이 동일한 간격
+	: space-between; 양 끝의 item을 main-axis 시작/종료 지점에 붙인 상태에서 동일한 간격
+	: flex-start; main-axis 시작점을 기준으로 정렬(기본값)
+	: flex-end; main-axis 종료점을 기준으로 정렬
+	: center : main-axis 가운데 정렬
+
+/* align-items : main-axis에 정렬된 item들을 교차축인 cross-axis방향으로 정렬하도록 지정하는 속성
+	: stretch;  item에 cross-axis 방향으로의 크기 지정이 없을 경우 
+		감싸고 있는 flex-container의 크기와 같은 크기를 가지도록 늘리는 속성
+	: flex-start; cross-axis의 시작 지점을 기준으로 배치
+	: flex-end; cross-axis의 종료 지점을 기준으로 배치 
+	: center; cross-axis의 가운데로 배치
+	: baseline; item 내부의 content가 모두 한 줄에 배치될 수 있도록 각각의 item을 cross-axis방향으로 움직이는 속성
+
+
+/* align-content 
+	- item이 포장된 한 줄을 단위로 하여 cross-axis방향으로 정렬(배치)하는 방법 
+        * 속성 값은 justify-content 값 모두 사용 가능
+        - flex-start    : cross-axis 시작점 기준
+        - flex-end      : cross-axis 끝점 기준
+        - center        : cross-axis 가운데
+        - space-around  : item이 포장된 한 줄에 cross-axis방향으로 일정한 크기의 공간을 나누어 배치
+        - space-evenly  : item이 포장된 한 줄에 cross-axis방향으로 동일한 크기의 공간을 나누어 배치
+        - space-between : item이 포장된 한 줄에 cross-axis 시작/끝지점에 붙어있게 하고
+                          나머지에 동일한 크기의 공간을 나누어 배치
+
+--------------------------------------------------------------------------------------------------------------------------
+item :  정렬이 필요한 요소(정렬 적용 대상)
+
+/* order
+    - item이 main-axis방향으로 배치되는 순서를 지정하는 속성   
+
+/* flex-grow
+    - item이 flex-container 내부에서 비어있는 공간을 메꿀 수 있도록 팽창하는 정도를 지정하는 속성 (반응형에서 사용)
+
+/* flex-shrink
+    - flex-container가 줄어들 때 내부 item이 수축하는 정도를 지정하는 속성
+    -> flex-wrap: nowrap; 일때만 적용 가능 (반응형에서 사용)
+
+/* flex-basis
+    - main-axis방향으로 item이 차지하는 크기를 지정하는 속성
+    - 각종 크기 단위 사용 가능
+      (px, pt, %, vh, em, rem 등)
+
+/* align-self
+    - 각 item별로 교차축 배치를 지정하는 속성
+
+
+
 </body>
 </html>
