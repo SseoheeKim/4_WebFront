@@ -7,57 +7,64 @@
     <title>09_입력 관련 태그</title>
 </head>
 <body>
-    <h1>입력 관련 태그</h1>
+    <h1>[입력 관련 태그]</h1>
     <h2>input 태그</h2>
     <p>- 웹 문서에서 사용자가 값을 입력할 수 있는 양식을 제공하는 태그</p>
+    <strong>** 모든 input태그의 형식은 inline</strong>
 
     <h3>text관련 input태그</h3>
     <pre>
     ** text관련 타입의 공통 속성 **
     - size : 입력 상자의 크기 지정
+
     - maxlength : 입력가능한 문자열의 최대 길이
 
-    - placeholder : 입력 상자에 작성될 내용 설명
-        (text 뿐만 아니라 다양한 number type에서도 사용 가능)
+    - placeholder : 입력 상자에 작성될 내용을 설명하는 예시
+       → text 뿐만 아니라 number 등 다양한 타입으로 사용 가능
+
+
+    ** value 속성 **
+    - 모든 input태그에 작성 가능한 속성이자, input태그만 가지고 있는 속성 
+    - input태그에 들어갈 초기값을 지정 또는 클릭/선택되었을 때의 값을 의미
+    
+    ** name 속성 **
+    - 모든 input 태그에 사용 가능한 속성
+    - 서로 관련된 input태그를 묶음으로 다룰 때(radio, checkbox) 같은 name속성 값을 작성
     </pre>
     
     <h4>type="text"</h4>
     <pre>
     - 한 줄 짜리 문자열을 입력할 수 있는 입력 상자   
     - input 태그의 기본값(type작성하지 않아도 type="text")
-    
-    <strong>** 모든 input태그의 형식은 inline</strong>
     </pre>
     
     <input type="text">
     <input>
 
     <hr>
-    size, maxlength, placeholder 추가 :
+    size(10), maxlength(10), placeholder 추가 :
     <input type="text" size="10" maxlength="10" placeholder="아이디 입력">
 
     <hr>
     <h4>type="password"</h4>
-    <p>비밀번호 입력 상자(입력되는 텍스트를 가려주는 용도)</p>
-    비밀번호 : <input type="password" id="pw1">
+    <p>비밀번호 입력 상자 - 입력되는 텍스트를 가려주는 용도 </p>
+    비밀번호 : <input type="password" id="pw1" placeholder="비밀번호 입력">
 
 
     <hr>
     <h4>기타 text관련 타입(url, tel, search, email)</h4>
     <pre>
     url, tel, search, email의 기본적인 출력형식은 text와 동일
+    type="text" 
+    type="url"
+    type="tel"
+    type="email" ... 
+
     1) 웹 접근성
     2) form태그와 함께 사용 시 유효성 검사를 간단히 진행
     3) 설계상의 의미 부여
     </pre>
 
-    <!-- ** value 속성 **
-        - 모든 input태그에 작성 가능한 속성이자, 
-        input태그만 가지고 있는 속성 
-
-        - input태그에 들어갈 초기값을 지정하는 속성
-         또는 클릭/선택되었을 때의 값을 의미 
-    -->
 
     홈페이지 : <input type="url" value="https://"> <br>
     전화번호 : <input type="tel"> <br>
@@ -72,7 +79,8 @@
     - max : 최대값
     - step : 증가/감소의 단계(단위)
 
-    ** 주의 size, maxlength는 사용 불가
+    ** 주의 
+    type:"number" 속성으로 지정된 경우 size, maxlength 속성은 사용 불가
     </pre>
 
     <h4>type="number"</h4>
@@ -96,13 +104,13 @@
     <hr>
 
     <h3>Date 관련 input 태그</h3>
-    <h4>type="date / month / week / time / datetime-local"</h4>
+    <h4>type="date" / "month" / "week" / "time" / "datetime-local"</h4>
     <ul>
-        <li><input type="date"></li>
-        <li><input type="month"></li>
-        <li><input type="week"></li>
-        <li><input type="time"></li>
-        <li><input type="datetime-local"></li>
+        <li>date : <input type="date"></li>
+        <li>month : <input type="month"></li>
+        <li>week : <input type="week"></li>
+        <li>time : <input type="time"></li>
+        <li>datetime-local : <input type="datetime-local"></li>
     </ul>
 
     <hr>
@@ -113,26 +121,18 @@
 
         2) type="radio"
             - 여러 값 중 단 하나만 선택 가능!!
-            
-        ** name 속성 
-        - input 태그들 모두 사용 가능한 속성
-        - 서로 관련된 input태그를 묶음으로 다룰 때(radio, checkbox)
-          같은 name속성 값을 작성
     </pre>
 
     <h4>type="radio"</h4>
-    팀 선택하세요<br>
     A팀<input type="radio" name="team"> 
-    / 
+ 
     B팀<input type="radio" name="team">
-    /
+    
     C팀<input type="radio" name="team">
-    /
+    
     D팀<input type="radio" name="team">
 
-    <hr>
     <h4>type="radiobox"</h4>
-    취미를 선택하세요<br>
     <input type="checkbox" name="hobby"> 야구 <br> 
     <input type="checkbox" name="hobby"> 축구 <br> 
     <input type="checkbox" name="hobby"> 농구 <br> 
@@ -157,8 +157,21 @@
     <label for="inputName">이름입력 : </label>
     <input type="text" id="inputName">
 
+    
     <hr>
-    <hr>
+    <h3>button 태그</h3>
+    <pre>
+    - 버튼 모양을 출력
+    
+    - type 종류
+    1) submit : form태그 내부 input태그 값을 'action주소에 제출'하는 버튼 속성
+    2) reset : form태그 내부 input태그 값을 '초기화'하는 버튼 속성
+    3) button : 아무 기능 없는 버튼(JS이벤트용으로 주로 사용)
+    </pre>
+    <button type="submit">제출</button> 
+    <button type="reset">초기화</button>
+
+
     <hr>
     <h1>form 태그</h1>
     <pre>
@@ -168,14 +181,17 @@
         value == input태그에 작성된 값 또는 value속성 값
 
     - form태그의 속성
-        1) ** action : 내부에 작성된 input값을 어디로 전달할지 지정하는 속성
-                    -> 주소를 작성
+        1) ** action : 내부에 작성된 input값을 어디로 전달할지 지정하는 속성 
+        → 주소나 경로를 작성
         
-        2) method(방식) : 데이터를 서버로 전달할 때의 방식을 지정하는 속성
+        2) method : 데이터를 서버로 전달할 때의 방식을 지정하는 속성 
+        → GET, POST
 
         3) name : form태그 이름을 지정(JS사용)
 
         4) target : action에 지정된 주소를 새 탭/현재 탭 중 어디서 열지 지정
+           target="_blank" : 클릭 시 새 탭을 열어서 지정된 주소를 오픈 
+
     </pre>
 
     <h3>form태그 예시1</h3>
@@ -184,12 +200,6 @@
         비밀번호 : <input type="password" name="inputPw">
         <button type="submit">로그인</button> 
         <button type="reset">초기화</button>
-        <!-- button 태그 : 버튼 모양을 출력
-            - type 종류
-            1) submit : form태그 내부 input태그 값을 'action주소에 제출'하는 버튼 속성
-            2) reset : form태그 내부 input태그 값을 '초기화'하는 버튼 속성
-            3) button : 아무 기능 없는 버튼(JS이벤트용으로 주로 사용)
-        -->
     </form>
 
     <h3>form태그 예시2</h3>
@@ -220,16 +230,24 @@
     </form>
 
     <hr>
-    <h2>기타 입력 관련 태그(textarea / select, option) </h2>
-    <h3>textarea : 여러 줄을 입력하기 위한 입력 상자</h3>        
+    <h2>기타 입력 관련 태그</h2>
+    <h3>textarea : 여러 줄을 입력하기 위한 입력 상자</h3>     
+    <pre>
+    textarea는 pre태그처럼 작성된 내용이 그대로 보여진다
+    → placeholder를 사용하고싶다면 띄어쓰기나 개행에 신경써야한다
+
+    & #13;& #10; : 마크업언어 내에서 줄 바꿈 문자
+
+    </pre>   
 
     <!-- 주소에 # 기호는 주소가 미정이기 때문에 현재 페이지로 제출 -->
     <form action="#">
-        <textarea name="ta" rows="10" cols="70" placeholder="내용을 작성하세요.&#13;&#10;다음줄 내용"
+        <textarea name="ta" rows="10" cols="70" 
+        placeholder="내용을 작성하세요.&#13;&#10;다음줄 내용"
         style="resize:none">제목 : 
 내용 : 
 작성자 :</textarea>
-        <!-- textarea는 pre태그처럼 작성된 내용이 그대로 보여진다!!!! -->
+
         <!-- &#13;&#10; : 마크업언어 내에서 줄 바꿈 문자 -->
         <!-- style="resize:none" : 내용 작성 크기 조절 불가 -->
         
@@ -238,18 +256,17 @@
 
     <hr>
     <h3>select, option : 선택상자(select)를 열어서 특정 값(option)을 선택</h3>
+    <pre>
+    select는 key, option은 value
+    - option태그 value 미작성시 : option태그의 내용을 전달
+    - option태그 value 작성시 :   value에 작성된 값을 전달 
+    </pre>
     <form action="#">
         <select name="food"> <!-- select == key -->
-            <option value="a">김밥</option> <!-- option == value -->
+            <option>김밥</option> <!-- option == value -->
             <option value="b">라면</option>
             <option value="c">냉면</option>
         </select>
-
-        <!-- 
-            option태그 value 미작성시 : option태그의 내용(태그 사이 값)  
-            option태그 value 작성시 :   value에 작성된 값 제출 
-        -->
-
         <button>제출하기</button>
     </form>
 
@@ -257,7 +274,7 @@
     <h3>fieldset / legend</h3>
     <pre>
     - fieldset : 테두리를 만들어 그룹을 구분하는 영역
-    - legent   : fieldset에 붙여주는 이름
+    - legend   : fieldset에 붙여주는 이름
     </pre>
 
     <fieldset>
