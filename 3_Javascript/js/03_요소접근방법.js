@@ -62,8 +62,7 @@ function fnTest4(){
     const input = document.getElementById("inputTest");
 
     // input 태그에 작성된 값을 나타내는 속성 => value
-    // == input태그는 종료태그가 없으므로 innerText로 값을 얻어오지 않고,
-    // value속성을 사용
+    // == input태그는 종료태그가 없으므로 innerText로 값을 얻어오지 않고, value속성을 사용
 
     // input 요소에 작성된 값을 얻어와 alert로 출력
     alert(input.value);
@@ -163,7 +162,7 @@ function readValue(){
 
 
         // 채팅창에 입력된 값으로 채팅 추가
-        bg.innerHTML += "<p><span>"+input.value+"</span></p>";
+        bg.innerHTML += "<p><span>"+ input.value+"</span></p>";
         
 
         // 채팅창의 화면이 차면 스크롤을 밑으로 내리기
