@@ -1,0 +1,7 @@
+#div1{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    transition-duration: 0.5s; /* 변화 지연시간 조정 */
+    
+}
