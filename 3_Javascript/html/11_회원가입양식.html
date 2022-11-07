@@ -5,55 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입양식</title>
+    <style>
+        fieldset{ width: 500px;}
+        span{ font-size: 14px;}
+        .error{ color : red; }
+        .confirm{ color : green;}
+    </style>
 </head>
 <body>
-    <form action="/main/html" method="POST">
+    <form action="main.html" method="POST" onsubmit="return validate();">
         <fieldset>
             <legend>회원 가입 양식</legend>
+            
             <table>
                 <tr>
                     <td>아이디</td>
-                    <td><input type="text" id="inputId"></td>
-                    <td><button>중복확인</button></td>
+                    <td>
+                        <input type="text" id="inputId">
+                    </td>
+                    <td>
+                        <button type="button">중복확인</button>
+                    </td>
                 </tr>
                 
                 <tr>
                     <td>비밀번호</td>
-                    <td><input type="password"></td>
+                    <td>
+                        <input type="password" id="inputPw">
+                    </td>
+                    <td>
+                        <span id="pwMessage"></span>
+                    </td>
                 </tr>
                 
                 <tr>
                     <td>비밀번호 확인</td>
-                    <td><input type="password"></td>
+                    <td>
+                        <input type="password" id="confirmPw">
+                    </td>
                 </tr>
 
                 <tr>
                     <td>이름</td>
-                    <td><input type="text"></td>
+                    <td>
+                        <input type="text" id="inputName">
+                    </td>
+                    <td>
+                        <span id="nameMessage"></span>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td><label for="gender">성별</label></td>
-                    <td>남 <input type="radio" name="gender">
-                        여 <input type="radio" name="gender"></td>
-                    
+                    <td>성별</td>
+                    <td>
+                        <label>남 <input type="radio" name="gender" vlaue="m"></label>
+                        <label>여 <input type="radio" name="gender" vlaue="f"></label>
+                    </td>
                 </tr>
 
                 <tr>
                     <td>전화번호</td>
-                    <td><input type="tel"></td>
+                    <td>
+                        <input type="tel" id="inputTel">
+                    </td>
                 </tr>
 
                 <tr>
                     <td>이메일</td>
-                    <td><input type="email"></td>
+                    <td>
+                        <input type="email" id="inputEmail">
+                    </td>
                 </tr>
 
                 <tr>
                     <td></td>
-                    <td colspan="3">
+                    <td style="text-align: right;">
                         <button type="reset">초기화</button>
-                        <button onsubmit="return validate()">회원가입</button>
+                        <button>회원가입</button>
                     </td>    
                     <td></td>
                 </tr>
