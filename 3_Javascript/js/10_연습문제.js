@@ -37,7 +37,7 @@ for(let item of boxColor) {
 
 
 
-// box-color 클래스 요소에 입력된 컬러에 따라
+// box-color(input요소) 클래스 요소에 입력된 컬러에 따라
 // box-color를 감싼 box클래스 요소의 배경색을 변경
 // + 입력된 input 요소의 글씨색도 함께 변경
 for(let i=0; i<box.length; i++){
@@ -45,8 +45,8 @@ for(let i=0; i<box.length; i++){
     boxColor[i].addEventListener("change", function(){
         box[i].style.backgroundColor = this.value;
         
-        // boxColor[i].style.color = this.value;
         this.style.color = this.value;
+        // boxColor[i].style.color = boxColor[i].value;
     })
 }
 
@@ -59,6 +59,7 @@ for(let i=0; i<box.length; i++){
 document.getElementById("btn1").addEventListener("click", function(){
     // 엔터쳐도 가능하려면?????????????????????????
     const duration = document.getElementById("input1").value;
+    
     document.getElementById("print1").innerText = duration;
     
     for(let item of box) {
