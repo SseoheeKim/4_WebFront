@@ -58,11 +58,11 @@ document.getElementById("btn1").addEventListener("click", function(){
     // 4. for(let key in 객체) -> JS객체용 for문
 
 
- });
+});
 
 
  // 배열 관련 함수 확인
- document.getElementById("btn2").addEventListener("click", function(){
+document.getElementById("btn2").addEventListener("click", function(){
     
     // 비어있는 배열 생성
     const arr = [];
