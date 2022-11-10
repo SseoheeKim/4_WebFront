@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>13_DOM</title>
+    <style>
+        .area {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        .area > div {
+            height: 10%;
+            box-sizing: border-box; /* content+border+padding */
+            border: 2px solid red;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
     <h1>DOM(Document Object Model)</h1>
@@ -69,6 +83,41 @@
     </pre>
 
     <button id="btn2">Element 확인하기</button>
+
+
+
+    <hr>
+    <h2>요소 생성 및 추가</h2>
+    <h3>innerHTML을 이용한 요소 생성 및 추가</h3>
+    <pre>
+        * innerHTML의 원리
+        1) 특정 요소의 내용을 새로운 내용으로 덮어쓰면서 생성
+            → 기존 요소를 제거하는 문제가 발생
+            
+        2) HTMLParser  
+            덮어쓰면서 새로운 내용만 추가하는 것이 아닌 
+            HTML요소를 포함하고 있기 때문에 이를 해석하기 위해 HTMLParser를 사용
+            → 속도가 느림 
+    </pre>
+    
+    <button id="btn3">innerHTML로 요소 생성</button>
+    <div class="area" id="div3"></div>    
+
+
+
+
+    <hr>
+    <h3>DOM 요소 생성(document.createElement()) 생성 및 추가</h3>
+    <pre>
+       * document.createElement("태그명") 
+        - 해당 태그 요소를 생성하여 반환
+        - 기존의 요소는 그대로 유지
+    </pre>
+
+    <button id="btn4">createElement로 요소 생성</button>
+    <div class="area" id="div4"></div>
+
+
 
     <script src="/js/13_DOM.js"></script>
 </body>
